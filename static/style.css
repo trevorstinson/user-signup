@@ -82,7 +82,7 @@ div.error {
 div.error p {
     /* text-transform: uppercase; */
     /* vertical-align: center; */
-    background-color: rgb(221, 65, 80);
+    background-color: hsla(354, 45%, 45%, 1.0);
     border-radius: 4px;
     border: none;
     color: hsla(220, 13%, 100%, 0.8);

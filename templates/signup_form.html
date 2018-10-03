@@ -1,46 +1,53 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Signup</h1>
-    <form method="post">
+    <h1>{{ title }}</h1>
+    <form method="post" action="/">
         <label>
             Username
-            <input type="text" name="">
+            <input type="text" name="username" value="{{ username }}">
         </label>
 
         <div class="error">
-            <p class="error">You have an error.</p>
+            {% if username_error %}
+            <p class="error">Username is required</p>
+            {% endif %}
         </div>
         
         <label>
-            Email
-            <input type="text" name="">
+            Email (optional)
+            <input type="text" name="email" value="{{ email }}">
         </label>
+
+        <div class="error">
+            {% if error_email %}
+            <p class="error">{{ error_email }}</p>
+            {% endif %}
+        </div>
 
         <label>
             Password
-            <input type="password" name="">
+            <input type="password" name="password">
         </label>
 
+        <div class="error">
+            {% if error == "password-empty" %}
+            <p class="error">Password is required.</p>
+            {% endif %}
+        </div>
+
         <label>
-            Password
-            <input type="password" name="">
+            Verify Password
+            <input type="password" name="verify">
         </label>
+
+        <div class="error">
+            {% if error == "verify-empty" %}
+            <p class="error">Please enter your password again.</p>
+            {% endif %}
+        </div>
 
         <input type="submit" value="Sign Up">
     </form>
 
-    <!-- <hr /> -->
-
-    <!-- {% if tasks|length == 0 %}
-    <p>No tasks yet</p>
-    {% else %}
-
-        <ul>
-            {% for task in tasks %}
-            <li>{{task}}</li>
-            {%  endfor %}
-        </ul>
-
-    {% endif %} -->
 {% endblock %}

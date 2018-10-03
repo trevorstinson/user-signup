@@ -2,7 +2,7 @@ body {
     background-color: hsla(220, 13%, 18%, 1.0);
     color: hsla(28, 61%, 61%, 1.0);
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300;
     letter-spacing: 1px;
     line-height: 1.5;
@@ -12,7 +12,7 @@ body {
 
 main {
     margin: 2em auto;
-    width: 400px;
+    width: 600px;
 }
 
 h1 {
@@ -22,7 +22,7 @@ h1 {
 label {
     display: flex;    
     justify-content: space-between;
-    margin: 1em auto;
+    margin: 2em auto;
     text-transform: uppercase;
     width: 100%;
 }
@@ -72,7 +72,10 @@ div.error {
     /* background-color: ; */
     /* width: 60%; */
     display: flex;
+    height: 1.4em;
     justify-content: flex-end;
+    margin-bottom: -1.6em;
+    margin-top: -1.8em;
     width: 100%;
 }
 
@@ -83,9 +86,10 @@ div.error p {
     border-radius: 4px;
     border: none;
     color: hsla(220, 13%, 100%, 0.8);
-    font-size: 0.65em;
+    font-size: .9em;
     letter-spacing: 1px;
     margin: 0;
-    padding: 6px 6px 2px;
+    padding: 2px 6px 2px;
+    text-transform: uppercase;
     width: 60%;
 }

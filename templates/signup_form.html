@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Signup</h1>
+    <form method="post">
+        <label>
+            Username
+            <input type="text" name="">
+        </label>
+
+        <div class="error">
+            <p class="error">You have an error.</p>
+        </div>
+        
+        <label>
+            Email
+            <input type="text" name="">
+        </label>
+
+        <label>
+            Password
+            <input type="password" name="">
+        </label>
+
+        <label>
+            Password
+            <input type="password" name="">
+        </label>
+
+        <input type="submit" value="Sign Up">
+    </form>
+
+    <!-- <hr /> -->
+
+    <!-- {% if tasks|length == 0 %}
+    <p>No tasks yet</p>
+    {% else %}
+
+        <ul>
+            {% for task in tasks %}
+            <li>{{task}}</li>
+            {%  endfor %}
+        </ul>
+
+    {% endif %} -->
+{% endblock %}

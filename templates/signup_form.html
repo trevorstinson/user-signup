@@ -10,7 +10,7 @@
 
         <div class="error">
             {% if username_error %}
-            <p class="error">Username is required</p>
+            <p class="error">{{ username_error }}</p>
             {% endif %}
         </div>
         
@@ -20,8 +20,8 @@
         </label>
 
         <div class="error">
-            {% if error_email %}
-            <p class="error">{{ error_email }}</p>
+            {% if email_error %}
+            <p class="error">{{ email_error }}</p>
             {% endif %}
         </div>
 
@@ -31,8 +31,8 @@
         </label>
 
         <div class="error">
-            {% if error == "password-empty" %}
-            <p class="error">Password is required.</p>
+            {% if password_error %}
+            <p class="error">{{ password_error }}</p>
             {% endif %}
         </div>
 
@@ -42,8 +42,8 @@
         </label>
 
         <div class="error">
-            {% if error == "verify-empty" %}
-            <p class="error">Please enter your password again.</p>
+            {% if verify_error %}
+            <p class="error">{{ verify_error }}</p>
             {% endif %}
         </div>
 

@@ -46,11 +46,16 @@ def index():
         if validate.contains_space(password):
             password_error = "Password cannot contain spaces"
 
-
         if validate.is_empty(username):
             username_error = "Please enter a username"
         if validate.is_empty(password):
             password_error = "Please enter a password"
+
+        if email:
+            if validate.is_not_email(email):
+                email_error = "Please use a valid email address"
+            if validate.contains_space(email):
+                email_error = "Emails cannot contain spaces"
 
         if username_error or email_error or password_error or verify_error:
             return render_template('signup_form.html', title = "User Signup",
@@ -62,8 +67,6 @@ def index():
         
         return render_template('welcome.html', title="Welcome, " + username,
                 username=username)
-
-
 
     return render_template('signup_form.html', title="User Signup",
         username=username, email=email)

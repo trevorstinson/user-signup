@@ -21,3 +21,12 @@ def does_not_match(user_input, user_verify):
         return True
     else:
         return False
+
+def is_not_email(user_input):
+    period = user_input.count('.')
+    at_sign = user_input.count('@')
+
+    if period != 1 or at_sign != 1:
+        return True
+    else:
+        return False

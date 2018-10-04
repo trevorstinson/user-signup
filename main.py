@@ -54,10 +54,6 @@ def index():
         if email:
             if validate.is_not_email(email):
                 email_error = "Please use a valid email address"
-            if validate.contains_space(email):
-                email_error = "Email cannot contain spaces"
-            if validate.is_out_of_range(email):
-                email_error = "Email must be 3-20 characters"
 
         if username_error or email_error or password_error or verify_error:
             return render_template('signup_form.html', title = "User Signup",
